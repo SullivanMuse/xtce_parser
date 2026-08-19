@@ -1,0 +1,15 @@
+[package]
+name = "read_write"
+version = "0.1.0"
+edition = "2024"
+publish = false
+
+[dependencies]
+num = "0.4.3"
+xsd-parser-types = { version = "0.2.1", features = ["quick-xml"] }
+# xsd-parser-types = { workspace = true, features = [ "quick-xml" ] }
+
+[build-dependencies]
+quote = "1.0.47"
+xsd-parser = { version = "1.5.2", features = ["web-resolver", "reqwest"] }
+# xsd-parser = { workspace = true }
