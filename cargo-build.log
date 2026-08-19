@@ -1,0 +1,1830 @@
+   Compiling read_write v0.1.0 (/home/smuse/repos/xtce_parser)
+error[E0433]: failed to resolve: could not find `DocumentType` in `my_schema`
+  --> src/main.rs:25:30
+   |
+25 |     let mut doc = my_schema::DocumentType::deserialize(&mut reader).unwrap();
+   |                              ^^^^^^^^^^^^ could not find `DocumentType` in `my_schema`
+
+error[E0422]: cannot find struct, variant or union type `DocumentTypeContent` in module `my_schema`
+  --> src/main.rs:35:33
+   |
+35 |     doc.content.push(my_schema::DocumentTypeContent {
+   |                                 ^^^^^^^^^^^^^^^^^^^ not found in `my_schema`
+
+warning: unused import: `DeserializeSync`
+ --> src/main.rs:3:35
+  |
+3 | use xsd_parser_types::quick_xml::{DeserializeSync, IoReader, SerializeSync, Writer, XmlReader};
+  |                                   ^^^^^^^^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+error[E0599]: no variant or associated item named `VALUE_DEFAULT` found for enum `my_schema::xml::Space` in the current scope
+  --> src/my_schema.rs:34:77
+   |
+21 |     pub enum Space {
+   |     -------------- variant or associated item `VALUE_DEFAULT` not found for this enum
+...
+34 |                 Self::Default => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_DEFAULT))),
+   |                                                                             ^^^^^^^^^^^^^ variant or associated item not found in `my_schema::xml::Space`
+
+error[E0599]: no variant or associated item named `VALUE_PRESERVE` found for enum `my_schema::xml::Space` in the current scope
+  --> src/my_schema.rs:35:78
+   |
+21 |     pub enum Space {
+   |     -------------- variant or associated item `VALUE_PRESERVE` not found for this enum
+...
+35 |                 Self::Preserve => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_PRESERVE))),
+   |                                                                              ^^^^^^^^^^^^^^ variant or associated item not found in `my_schema::xml::Space`
+
+error[E0599]: no variant or associated item named `VALUE_PER_SECOND` found for enum `BasisType` in the current scope
+    --> src/my_schema.rs:3434:79
+     |
+3421 |     pub enum BasisType {
+     |     ------------------ variant or associated item `VALUE_PER_SECOND` not found for this enum
+...
+3434 |                 Self::PerSecond => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_PER_SECOND))),
+     |                                                                               ^^^^^^^^^^^^^^^^ variant or associated item not found in `BasisType`
+
+error[E0599]: no variant or associated item named `VALUE_PER_CONTAINER_UPDATE` found for enum `BasisType` in the current scope
+    --> src/my_schema.rs:3436:27
+     |
+3421 |     pub enum BasisType {
+     |     ------------------ variant or associated item `VALUE_PER_CONTAINER_UPDATE` not found for this enum
+...
+3436 |                     Self::VALUE_PER_CONTAINER_UPDATE,
+     |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^ variant or associated item not found in `BasisType`
+
+error[E0599]: no variant or associated item named `VALUE_LEAST_SIGNIFICANT_BIT_FIRST` found for enum `BitOrderType` in the current scope
+    --> src/my_schema.rs:3870:27
+     |
+3856 |     pub enum BitOrderType {
+     |     --------------------- variant or associated item `VALUE_LEAST_SIGNIFICANT_BIT_FIRST` not found for this enum
+...
+3870 |                     Self::VALUE_LEAST_SIGNIFICANT_BIT_FIRST,
+     |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ variant or associated item not found in `BitOrderType`
+
+error[E0599]: no variant or associated item named `VALUE_MOST_SIGNIFICANT_BIT_FIRST` found for enum `BitOrderType` in the current scope
+    --> src/my_schema.rs:3873:27
+     |
+3856 |     pub enum BitOrderType {
+     |     --------------------- variant or associated item `VALUE_MOST_SIGNIFICANT_BIT_FIRST` not found for this enum
+...
+3873 |                     Self::VALUE_MOST_SIGNIFICANT_BIT_FIRST,
+     |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ variant or associated item not found in `BitOrderType`
+
+error[E0599]: no variant or associated item named `VALUE_MOST_SIGNIFICANT_BYTE_FIRST` found for enum `ByteOrderCommonType` in the current scope
+    --> src/my_schema.rs:4193:27
+     |
+4179 |     pub enum ByteOrderCommonType {
+     |     ---------------------------- variant or associated item `VALUE_MOST_SIGNIFICANT_BYTE_FIRST` not found for this enum
+...
+4193 |                     Self::VALUE_MOST_SIGNIFICANT_BYTE_FIRST,
+     |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ variant or associated item not found in `ByteOrderCommonType`
+
+error[E0599]: no variant or associated item named `VALUE_LEAST_SIGNIFICANT_BYTE_FIRST` found for enum `ByteOrderCommonType` in the current scope
+    --> src/my_schema.rs:4196:27
+     |
+4179 |     pub enum ByteOrderCommonType {
+     |     ---------------------------- variant or associated item `VALUE_LEAST_SIGNIFICANT_BYTE_FIRST` not found for this enum
+...
+4196 |                     Self::VALUE_LEAST_SIGNIFICANT_BYTE_FIRST,
+     |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ variant or associated item not found in `ByteOrderCommonType`
+
+error[E0599]: no variant or associated item named `VALUE_ABSOLUTE_CHANGE` found for enum `ChangeBasisType` in the current scope
+    --> src/my_schema.rs:4466:27
+     |
+4452 |     pub enum ChangeBasisType {
+     |     ------------------------ variant or associated item `VALUE_ABSOLUTE_CHANGE` not found for this enum
+...
+4466 |                     Self::VALUE_ABSOLUTE_CHANGE,
+     |                           ^^^^^^^^^^^^^^^^^^^^^ variant or associated item not found in `ChangeBasisType`
+
+error[E0599]: no variant or associated item named `VALUE_PERCENTAGE_CHANGE` found for enum `ChangeBasisType` in the current scope
+    --> src/my_schema.rs:4469:27
+     |
+4452 |     pub enum ChangeBasisType {
+     |     ------------------------ variant or associated item `VALUE_PERCENTAGE_CHANGE` not found for this enum
+...
+4469 |                     Self::VALUE_PERCENTAGE_CHANGE,
+     |                           ^^^^^^^^^^^^^^^^^^^^^^^ variant or associated item not found in `ChangeBasisType`
+
+error[E0599]: no variant or associated item named `VALUE_CHANGE_PER_SECOND` found for enum `ChangeSpanType` in the current scope
+    --> src/my_schema.rs:4507:27
+     |
+4493 |     pub enum ChangeSpanType {
+     |     ----------------------- variant or associated item `VALUE_CHANGE_PER_SECOND` not found for this enum
+...
+4507 |                     Self::VALUE_CHANGE_PER_SECOND,
+     |                           ^^^^^^^^^^^^^^^^^^^^^^^ variant or associated item not found in `ChangeSpanType`
+
+error[E0599]: no variant or associated item named `VALUE_CHANGE_PER_SAMPLE` found for enum `ChangeSpanType` in the current scope
+    --> src/my_schema.rs:4510:27
+     |
+4493 |     pub enum ChangeSpanType {
+     |     ----------------------- variant or associated item `VALUE_CHANGE_PER_SAMPLE` not found for this enum
+...
+4510 |                     Self::VALUE_CHANGE_PER_SAMPLE,
+     |                           ^^^^^^^^^^^^^^^^^^^^^^^ variant or associated item not found in `ChangeSpanType`
+
+error[E0599]: no variant or associated item named `VALUE_EQ` found for enum `ComparisonOperatorsType` in the current scope
+    --> src/my_schema.rs:5002:72
+     |
+4985 |     pub enum ComparisonOperatorsType {
+     |     -------------------------------- variant or associated item `VALUE_EQ` not found for this enum
+...
+5002 |                 Self::Eq => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_EQ))),
+     |                                                                        ^^^^^^^^ variant or associated item not found in `ComparisonOperatorsType`
+
+error[E0599]: no variant or associated item named `VALUE_NE` found for enum `ComparisonOperatorsType` in the current scope
+    --> src/my_schema.rs:5003:72
+     |
+4985 |     pub enum ComparisonOperatorsType {
+     |     -------------------------------- variant or associated item `VALUE_NE` not found for this enum
+...
+5003 |                 Self::Ne => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_NE))),
+     |                                                                        ^^^^^^^^ variant or associated item not found in `ComparisonOperatorsType`
+
+error[E0599]: no variant or associated item named `VALUE_LT` found for enum `ComparisonOperatorsType` in the current scope
+    --> src/my_schema.rs:5004:72
+     |
+4985 |     pub enum ComparisonOperatorsType {
+     |     -------------------------------- variant or associated item `VALUE_LT` not found for this enum
+...
+5004 |                 Self::Lt => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_LT))),
+     |                                                                        ^^^^^^^^ variant or associated item not found in `ComparisonOperatorsType`
+
+error[E0599]: no variant or associated item named `VALUE_LE` found for enum `ComparisonOperatorsType` in the current scope
+    --> src/my_schema.rs:5005:72
+     |
+4985 |     pub enum ComparisonOperatorsType {
+     |     -------------------------------- variant or associated item `VALUE_LE` not found for this enum
+...
+5005 |                 Self::Le => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_LE))),
+     |                                                                        ^^^^^^^^ variant or associated item not found in `ComparisonOperatorsType`
+
+error[E0599]: no variant or associated item named `VALUE_GT` found for enum `ComparisonOperatorsType` in the current scope
+    --> src/my_schema.rs:5006:72
+     |
+4985 |     pub enum ComparisonOperatorsType {
+     |     -------------------------------- variant or associated item `VALUE_GT` not found for this enum
+...
+5006 |                 Self::Gt => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_GT))),
+     |                                                                        ^^^^^^^^ variant or associated item not found in `ComparisonOperatorsType`
+
+error[E0599]: no variant or associated item named `VALUE_GE` found for enum `ComparisonOperatorsType` in the current scope
+    --> src/my_schema.rs:5007:72
+     |
+4985 |     pub enum ComparisonOperatorsType {
+     |     -------------------------------- variant or associated item `VALUE_GE` not found for this enum
+...
+5007 |                 Self::Ge => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_GE))),
+     |                                                                        ^^^^^^^^ variant or associated item not found in `ComparisonOperatorsType`
+
+error[E0599]: no variant or associated item named `VALUE_NORMAL` found for enum `ConcernLevelsType` in the current scope
+    --> src/my_schema.rs:5158:76
+     |
+5141 |     pub enum ConcernLevelsType {
+     |     -------------------------- variant or associated item `VALUE_NORMAL` not found for this enum
+...
+5158 |                 Self::Normal => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_NORMAL))),
+     |                                                                            ^^^^^^^^^^^^ variant or associated item not found in `ConcernLevelsType`
+
+error[E0599]: no variant or associated item named `VALUE_WATCH` found for enum `ConcernLevelsType` in the current scope
+    --> src/my_schema.rs:5159:75
+     |
+5141 |     pub enum ConcernLevelsType {
+     |     -------------------------- variant or associated item `VALUE_WATCH` not found for this enum
+...
+5159 |                 Self::Watch => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_WATCH))),
+     |                                                                           ^^^^^^^^^^^ variant or associated item not found in `ConcernLevelsType`
+
+error[E0599]: no variant or associated item named `VALUE_WARNING` found for enum `ConcernLevelsType` in the current scope
+    --> src/my_schema.rs:5160:77
+     |
+5141 |     pub enum ConcernLevelsType {
+     |     -------------------------- variant or associated item `VALUE_WARNING` not found for this enum
+...
+5160 |                 Self::Warning => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_WARNING))),
+     |                                                                             ^^^^^^^^^^^^^ variant or associated item not found in `ConcernLevelsType`
+
+error[E0599]: no variant or associated item named `VALUE_DISTRESS` found for enum `ConcernLevelsType` in the current scope
+    --> src/my_schema.rs:5161:78
+     |
+5141 |     pub enum ConcernLevelsType {
+     |     -------------------------- variant or associated item `VALUE_DISTRESS` not found for this enum
+...
+5161 |                 Self::Distress => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_DISTRESS))),
+     |                                                                              ^^^^^^^^^^^^^^ variant or associated item not found in `ConcernLevelsType`
+
+error[E0599]: no variant or associated item named `VALUE_CRITICAL` found for enum `ConcernLevelsType` in the current scope
+    --> src/my_schema.rs:5162:78
+     |
+5141 |     pub enum ConcernLevelsType {
+     |     -------------------------- variant or associated item `VALUE_CRITICAL` not found for this enum
+...
+5162 |                 Self::Critical => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_CRITICAL))),
+     |                                                                              ^^^^^^^^^^^^^^ variant or associated item not found in `ConcernLevelsType`
+
+error[E0599]: no variant or associated item named `VALUE_SEVERE` found for enum `ConcernLevelsType` in the current scope
+    --> src/my_schema.rs:5163:76
+     |
+5141 |     pub enum ConcernLevelsType {
+     |     -------------------------- variant or associated item `VALUE_SEVERE` not found for this enum
+...
+5163 |                 Self::Severe => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_SEVERE))),
+     |                                                                            ^^^^^^^^^^^^ variant or associated item not found in `ConcernLevelsType`
+
+error[E0599]: no variant or associated item named `VALUE_NORMAL` found for enum `ConsequenceLevelType` in the current scope
+    --> src/my_schema.rs:5207:76
+     |
+5190 |     pub enum ConsequenceLevelType {
+     |     ----------------------------- variant or associated item `VALUE_NORMAL` not found for this enum
+...
+5207 |                 Self::Normal => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_NORMAL))),
+     |                                                                            ^^^^^^^^^^^^ variant or associated item not found in `ConsequenceLevelType`
+
+error[E0599]: no variant or associated item named `VALUE_VITAL` found for enum `ConsequenceLevelType` in the current scope
+    --> src/my_schema.rs:5208:75
+     |
+5190 |     pub enum ConsequenceLevelType {
+     |     ----------------------------- variant or associated item `VALUE_VITAL` not found for this enum
+...
+5208 |                 Self::Vital => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_VITAL))),
+     |                                                                           ^^^^^^^^^^^ variant or associated item not found in `ConsequenceLevelType`
+
+error[E0599]: no variant or associated item named `VALUE_CRITICAL` found for enum `ConsequenceLevelType` in the current scope
+    --> src/my_schema.rs:5209:78
+     |
+5190 |     pub enum ConsequenceLevelType {
+     |     ----------------------------- variant or associated item `VALUE_CRITICAL` not found for this enum
+...
+5209 |                 Self::Critical => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_CRITICAL))),
+     |                                                                              ^^^^^^^^^^^^^^ variant or associated item not found in `ConsequenceLevelType`
+
+error[E0599]: no variant or associated item named `VALUE_FORBIDDEN` found for enum `ConsequenceLevelType` in the current scope
+    --> src/my_schema.rs:5210:79
+     |
+5190 |     pub enum ConsequenceLevelType {
+     |     ----------------------------- variant or associated item `VALUE_FORBIDDEN` not found for this enum
+...
+5210 |                 Self::Forbidden => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_FORBIDDEN))),
+     |                                                                               ^^^^^^^^^^^^^^^ variant or associated item not found in `ConsequenceLevelType`
+
+error[E0599]: no variant or associated item named `VALUE_USER_1` found for enum `ConsequenceLevelType` in the current scope
+    --> src/my_schema.rs:5211:75
+     |
+5190 |     pub enum ConsequenceLevelType {
+     |     ----------------------------- variant or associated item `VALUE_USER_1` not found for this enum
+...
+5211 |                 Self::User1 => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_USER_1))),
+     |                                                                           ^^^^^^^^^^^^ variant or associated item not found in `ConsequenceLevelType`
+
+error[E0599]: no variant or associated item named `VALUE_USER_2` found for enum `ConsequenceLevelType` in the current scope
+    --> src/my_schema.rs:5212:75
+     |
+5190 |     pub enum ConsequenceLevelType {
+     |     ----------------------------- variant or associated item `VALUE_USER_2` not found for this enum
+...
+5212 |                 Self::User2 => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_USER_2))),
+     |                                                                           ^^^^^^^^^^^^ variant or associated item not found in `ConsequenceLevelType`
+
+error[E0599]: no variant or associated item named `VALUE_TAI` found for enum `EpochTimeEnumsType` in the current scope
+    --> src/my_schema.rs:6505:73
+     |
+6490 |     pub enum EpochTimeEnumsType {
+     |     --------------------------- variant or associated item `VALUE_TAI` not found for this enum
+...
+6505 |                 Self::Tai => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_TAI))),
+     |                                                                         ^^^^^^^^^ variant or associated item not found in `EpochTimeEnumsType`
+
+error[E0599]: no variant or associated item named `VALUE_J2000` found for enum `EpochTimeEnumsType` in the current scope
+    --> src/my_schema.rs:6506:75
+     |
+6490 |     pub enum EpochTimeEnumsType {
+     |     --------------------------- variant or associated item `VALUE_J2000` not found for this enum
+...
+6506 |                 Self::J2000 => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_J2000))),
+     |                                                                           ^^^^^^^^^^^ variant or associated item not found in `EpochTimeEnumsType`
+
+error[E0599]: no variant or associated item named `VALUE_UNIX` found for enum `EpochTimeEnumsType` in the current scope
+    --> src/my_schema.rs:6507:74
+     |
+6490 |     pub enum EpochTimeEnumsType {
+     |     --------------------------- variant or associated item `VALUE_UNIX` not found for this enum
+...
+6507 |                 Self::Unix => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_UNIX))),
+     |                                                                          ^^^^^^^^^^ variant or associated item not found in `EpochTimeEnumsType`
+
+error[E0599]: no variant or associated item named `VALUE_GPS` found for enum `EpochTimeEnumsType` in the current scope
+    --> src/my_schema.rs:6508:73
+     |
+6490 |     pub enum EpochTimeEnumsType {
+     |     --------------------------- variant or associated item `VALUE_GPS` not found for this enum
+...
+6508 |                 Self::Gps => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_GPS))),
+     |                                                                         ^^^^^^^^^ variant or associated item not found in `EpochTimeEnumsType`
+
+error[E0599]: the method `serialize_bytes` exists for reference `&BigInt`, but its trait bounds were not satisfied
+    --> src/my_schema.rs:6884:38
+     |
+6884 |                 Self::BigInt(x) => x.serialize_bytes(helper),
+     |                                      ^^^^^^^^^^^^^^^
+     |
+    ::: /home/smuse/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/num-bigint-0.4.8/src/bigint.rs:60:1
+     |
+  60 | pub struct BigInt {
+     | ----------------- doesn't satisfy `BigInt: SerializeBytesToString` or `BigInt: SerializeBytes`
+     |
+     = note: the following trait bounds were not satisfied:
+             `BigInt: SerializeBytesToString`
+             which is required by `BigInt: SerializeBytes`
+             `&BigInt: SerializeBytesToString`
+             which is required by `&BigInt: SerializeBytes`
+
+error[E0599]: the function or associated item `deserialize_bytes` exists for struct `BigInt`, but its trait bounds were not satisfied
+    --> src/my_schema.rs:6896:34
+     |
+6896 |             match ::num::BigInt::deserialize_bytes(helper, bytes) {
+     |                                  ^^^^^^^^^^^^^^^^^ function or associated item cannot be called on `BigInt` due to unsatisfied trait bounds
+     |
+    ::: /home/smuse/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/num-bigint-0.4.8/src/bigint.rs:60:1
+     |
+  60 | pub struct BigInt {
+     | ----------------- doesn't satisfy `BigInt: DeserializeBytesFromStr` or `BigInt: DeserializeBytes`
+     |
+note: if you're trying to build a new `BigInt` consider using one of the following associated functions:
+      BigInt::new
+      BigInt::new_const
+      BigInt::from_biguint
+      BigInt::from_slice
+      and 7 others
+    --> /home/smuse/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/num-bigint-0.4.8/src/bigint.rs:593:5
+     |
+ 593 |     pub fn new(sign: Sign, digits: Vec<u32>) -> BigInt {
+     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+...
+ 601 |     pub const fn new_const(n: i32) -> Self {
+     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+...
+ 617 |     pub fn from_biguint(mut sign: Sign, mut data: BigUint) -> BigInt {
+     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+...
+ 631 |     pub fn from_slice(sign: Sign, slice: &[u32]) -> BigInt {
+     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+     = note: the following trait bounds were not satisfied:
+             `BigInt: DeserializeBytesFromStr`
+             which is required by `BigInt: DeserializeBytes`
+             `&BigInt: DeserializeBytesFromStr`
+             which is required by `&BigInt: DeserializeBytes`
+             `&BigInt: FromStr`
+             which is required by `&BigInt: DeserializeBytes`
+             `&mut BigInt: DeserializeBytesFromStr`
+             which is required by `&mut BigInt: DeserializeBytes`
+             `&mut BigInt: FromStr`
+             which is required by `&mut BigInt: DeserializeBytes`
+
+error[E0599]: no variant or associated item named `VALUE_ZEROS` found for enum `FlagBitType` in the current scope
+    --> src/my_schema.rs:6924:75
+     |
+6911 |     pub enum FlagBitType {
+     |     -------------------- variant or associated item `VALUE_ZEROS` not found for this enum
+...
+6924 |                 Self::Zeros => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_ZEROS))),
+     |                                                                           ^^^^^^^^^^^ variant or associated item not found in `FlagBitType`
+
+error[E0599]: no variant or associated item named `VALUE_ONES` found for enum `FlagBitType` in the current scope
+    --> src/my_schema.rs:6925:74
+     |
+6911 |     pub enum FlagBitType {
+     |     -------------------- variant or associated item `VALUE_ONES` not found for this enum
+...
+6925 |                 Self::Ones => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_ONES))),
+     |                                                                          ^^^^^^^^^^ variant or associated item not found in `FlagBitType`
+
+error[E0599]: no variant or associated item named `VALUE_16` found for enum `FloatEncodingSizeInBitsType` in the current scope
+    --> src/my_schema.rs:7190:73
+     |
+7172 |     pub enum FloatEncodingSizeInBitsType {
+     |     ------------------------------------ variant or associated item `VALUE_16` not found for this enum
+...
+7190 |                 Self::_16 => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_16))),
+     |                                                                         ^^^^^^^^ variant or associated item not found in `FloatEncodingSizeInBitsType`
+
+error[E0599]: no variant or associated item named `VALUE_32` found for enum `FloatEncodingSizeInBitsType` in the current scope
+    --> src/my_schema.rs:7191:73
+     |
+7172 |     pub enum FloatEncodingSizeInBitsType {
+     |     ------------------------------------ variant or associated item `VALUE_32` not found for this enum
+...
+7191 |                 Self::_32 => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_32))),
+     |                                                                         ^^^^^^^^ variant or associated item not found in `FloatEncodingSizeInBitsType`
+
+error[E0599]: no variant or associated item named `VALUE_40` found for enum `FloatEncodingSizeInBitsType` in the current scope
+    --> src/my_schema.rs:7192:73
+     |
+7172 |     pub enum FloatEncodingSizeInBitsType {
+     |     ------------------------------------ variant or associated item `VALUE_40` not found for this enum
+...
+7192 |                 Self::_40 => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_40))),
+     |                                                                         ^^^^^^^^ variant or associated item not found in `FloatEncodingSizeInBitsType`
+
+error[E0599]: no variant or associated item named `VALUE_48` found for enum `FloatEncodingSizeInBitsType` in the current scope
+    --> src/my_schema.rs:7193:73
+     |
+7172 |     pub enum FloatEncodingSizeInBitsType {
+     |     ------------------------------------ variant or associated item `VALUE_48` not found for this enum
+...
+7193 |                 Self::_48 => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_48))),
+     |                                                                         ^^^^^^^^ variant or associated item not found in `FloatEncodingSizeInBitsType`
+
+error[E0599]: no variant or associated item named `VALUE_64` found for enum `FloatEncodingSizeInBitsType` in the current scope
+    --> src/my_schema.rs:7194:73
+     |
+7172 |     pub enum FloatEncodingSizeInBitsType {
+     |     ------------------------------------ variant or associated item `VALUE_64` not found for this enum
+...
+7194 |                 Self::_64 => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_64))),
+     |                                                                         ^^^^^^^^ variant or associated item not found in `FloatEncodingSizeInBitsType`
+
+error[E0599]: no variant or associated item named `VALUE_80` found for enum `FloatEncodingSizeInBitsType` in the current scope
+    --> src/my_schema.rs:7195:73
+     |
+7172 |     pub enum FloatEncodingSizeInBitsType {
+     |     ------------------------------------ variant or associated item `VALUE_80` not found for this enum
+...
+7195 |                 Self::_80 => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_80))),
+     |                                                                         ^^^^^^^^ variant or associated item not found in `FloatEncodingSizeInBitsType`
+
+error[E0599]: no variant or associated item named `VALUE_128` found for enum `FloatEncodingSizeInBitsType` in the current scope
+    --> src/my_schema.rs:7196:74
+     |
+7172 |     pub enum FloatEncodingSizeInBitsType {
+     |     ------------------------------------ variant or associated item `VALUE_128` not found for this enum
+...
+7196 |                 Self::_128 => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_128))),
+     |                                                                          ^^^^^^^^^ variant or associated item not found in `FloatEncodingSizeInBitsType`
+
+error[E0599]: no variant or associated item named `VALUE_IEEE_7541985` found for enum `FloatEncodingType` in the current scope
+    --> src/my_schema.rs:7242:64
+     |
+7224 |     pub enum FloatEncodingType {
+     |     -------------------------- variant or associated item `VALUE_IEEE_7541985` not found for this enum
+...
+7242 |                     Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_IEEE_7541985)))
+     |                                                                ^^^^^^^^^^^^^^^^^^ variant or associated item not found in `FloatEncodingType`
+
+error[E0599]: no variant or associated item named `VALUE_IEEE_754` found for enum `FloatEncodingType` in the current scope
+    --> src/my_schema.rs:7244:77
+     |
+7224 |     pub enum FloatEncodingType {
+     |     -------------------------- variant or associated item `VALUE_IEEE_754` not found for this enum
+...
+7244 |                 Self::Ieee754 => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_IEEE_754))),
+     |                                                                             ^^^^^^^^^^^^^^ variant or associated item not found in `FloatEncodingType`
+
+error[E0599]: no variant or associated item named `VALUE_MILSTD_1750A` found for enum `FloatEncodingType` in the current scope
+    --> src/my_schema.rs:7246:64
+     |
+7224 |     pub enum FloatEncodingType {
+     |     -------------------------- variant or associated item `VALUE_MILSTD_1750A` not found for this enum
+...
+7246 |                     Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_MILSTD_1750A)))
+     |                                                                ^^^^^^^^^^^^^^^^^^ variant or associated item not found in `FloatEncodingType`
+
+error[E0599]: no variant or associated item named `VALUE_DEC` found for enum `FloatEncodingType` in the current scope
+    --> src/my_schema.rs:7248:73
+     |
+7224 |     pub enum FloatEncodingType {
+     |     -------------------------- variant or associated item `VALUE_DEC` not found for this enum
+...
+7248 |                 Self::Dec => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_DEC))),
+     |                                                                         ^^^^^^^^^ variant or associated item not found in `FloatEncodingType`
+
+error[E0599]: no variant or associated item named `VALUE_IBM` found for enum `FloatEncodingType` in the current scope
+    --> src/my_schema.rs:7249:73
+     |
+7224 |     pub enum FloatEncodingType {
+     |     -------------------------- variant or associated item `VALUE_IBM` not found for this enum
+...
+7249 |                 Self::Ibm => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_IBM))),
+     |                                                                         ^^^^^^^^^ variant or associated item not found in `FloatEncodingType`
+
+error[E0599]: no variant or associated item named `VALUE_TI` found for enum `FloatEncodingType` in the current scope
+    --> src/my_schema.rs:7250:72
+     |
+7224 |     pub enum FloatEncodingType {
+     |     -------------------------- variant or associated item `VALUE_TI` not found for this enum
+...
+7250 |                 Self::Ti => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_TI))),
+     |                                                                        ^^^^^^^^ variant or associated item not found in `FloatEncodingType`
+
+error[E0599]: no variant or associated item named `VALUE_32` found for enum `FloatSizeInBitsType` in the current scope
+    --> src/my_schema.rs:7391:73
+     |
+7377 |     pub enum FloatSizeInBitsType {
+     |     ---------------------------- variant or associated item `VALUE_32` not found for this enum
+...
+7391 |                 Self::_32 => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_32))),
+     |                                                                         ^^^^^^^^ variant or associated item not found in `FloatSizeInBitsType`
+
+error[E0599]: no variant or associated item named `VALUE_64` found for enum `FloatSizeInBitsType` in the current scope
+    --> src/my_schema.rs:7392:73
+     |
+7377 |     pub enum FloatSizeInBitsType {
+     |     ---------------------------- variant or associated item `VALUE_64` not found for this enum
+...
+7392 |                 Self::_64 => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_64))),
+     |                                                                         ^^^^^^^^ variant or associated item not found in `FloatSizeInBitsType`
+
+error[E0599]: no variant or associated item named `VALUE_128` found for enum `FloatSizeInBitsType` in the current scope
+    --> src/my_schema.rs:7393:74
+     |
+7377 |     pub enum FloatSizeInBitsType {
+     |     ---------------------------- variant or associated item `VALUE_128` not found for this enum
+...
+7393 |                 Self::_128 => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_128))),
+     |                                                                          ^^^^^^^^^ variant or associated item not found in `FloatSizeInBitsType`
+
+error[E0599]: no variant or associated item named `VALUE_NORMAL` found for enum `FloatingPointNotationType` in the current scope
+    --> src/my_schema.rs:7431:76
+     |
+7417 |     pub enum FloatingPointNotationType {
+     |     ---------------------------------- variant or associated item `VALUE_NORMAL` not found for this enum
+...
+7431 |                 Self::Normal => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_NORMAL))),
+     |                                                                            ^^^^^^^^^^^^ variant or associated item not found in `FloatingPointNotationType`
+
+error[E0599]: no variant or associated item named `VALUE_SCIENTIFIC` found for enum `FloatingPointNotationType` in the current scope
+    --> src/my_schema.rs:7432:80
+     |
+7417 |     pub enum FloatingPointNotationType {
+     |     ---------------------------------- variant or associated item `VALUE_SCIENTIFIC` not found for this enum
+...
+7432 |                 Self::Scientific => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_SCIENTIFIC))),
+     |                                                                                ^^^^^^^^^^^^^^^^ variant or associated item not found in `FloatingPointNotationType`
+
+error[E0599]: no variant or associated item named `VALUE_ENGINEERING` found for enum `FloatingPointNotationType` in the current scope
+    --> src/my_schema.rs:7434:64
+     |
+7417 |     pub enum FloatingPointNotationType {
+     |     ---------------------------------- variant or associated item `VALUE_ENGINEERING` not found for this enum
+...
+7434 |                     Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_ENGINEERING)))
+     |                                                                ^^^^^^^^^^^^^^^^^ variant or associated item not found in `FloatingPointNotationType`
+
+error[E0599]: no variant or associated item named `VALUE_UNSIGNED` found for enum `IntegerEncodingType` in the current scope
+    --> src/my_schema.rs:8053:78
+     |
+8036 |     pub enum IntegerEncodingType {
+     |     ---------------------------- variant or associated item `VALUE_UNSIGNED` not found for this enum
+...
+8053 |                 Self::Unsigned => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_UNSIGNED))),
+     |                                                                              ^^^^^^^^^^^^^^ variant or associated item not found in `IntegerEncodingType`
+
+error[E0599]: no variant or associated item named `VALUE_SIGN_MAGNITUDE` found for enum `IntegerEncodingType` in the current scope
+    --> src/my_schema.rs:8055:27
+     |
+8036 |     pub enum IntegerEncodingType {
+     |     ---------------------------- variant or associated item `VALUE_SIGN_MAGNITUDE` not found for this enum
+...
+8055 |                     Self::VALUE_SIGN_MAGNITUDE,
+     |                           ^^^^^^^^^^^^^^^^^^^^ variant or associated item not found in `IntegerEncodingType`
+
+error[E0599]: no variant or associated item named `VALUE_TWOS_COMPLEMENT` found for enum `IntegerEncodingType` in the current scope
+    --> src/my_schema.rs:8058:27
+     |
+8036 |     pub enum IntegerEncodingType {
+     |     ---------------------------- variant or associated item `VALUE_TWOS_COMPLEMENT` not found for this enum
+...
+8058 |                     Self::VALUE_TWOS_COMPLEMENT,
+     |                           ^^^^^^^^^^^^^^^^^^^^^ variant or associated item not found in `IntegerEncodingType`
+
+error[E0599]: no variant or associated item named `VALUE_ONES_COMPLEMENT` found for enum `IntegerEncodingType` in the current scope
+    --> src/my_schema.rs:8061:27
+     |
+8036 |     pub enum IntegerEncodingType {
+     |     ---------------------------- variant or associated item `VALUE_ONES_COMPLEMENT` not found for this enum
+...
+8061 |                     Self::VALUE_ONES_COMPLEMENT,
+     |                           ^^^^^^^^^^^^^^^^^^^^^ variant or associated item not found in `IntegerEncodingType`
+
+error[E0599]: no variant or associated item named `VALUE_BCD` found for enum `IntegerEncodingType` in the current scope
+    --> src/my_schema.rs:8063:73
+     |
+8036 |     pub enum IntegerEncodingType {
+     |     ---------------------------- variant or associated item `VALUE_BCD` not found for this enum
+...
+8063 |                 Self::Bcd => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_BCD))),
+     |                                                                         ^^^^^^^^^ variant or associated item not found in `IntegerEncodingType`
+
+error[E0599]: no variant or associated item named `VALUE_PACKED_BCD` found for enum `IntegerEncodingType` in the current scope
+    --> src/my_schema.rs:8064:79
+     |
+8036 |     pub enum IntegerEncodingType {
+     |     ---------------------------- variant or associated item `VALUE_PACKED_BCD` not found for this enum
+...
+8064 |                 Self::PackedBcd => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_PACKED_BCD))),
+     |                                                                               ^^^^^^^^^^^^^^^^ variant or associated item not found in `IntegerEncodingType`
+
+error[E0599]: no variant or associated item named `VALUE_PLUS` found for enum `MathOperatorsType` in the current scope
+    --> src/my_schema.rs:8609:74
+     |
+8549 |     pub enum MathOperatorsType {
+     |     -------------------------- variant or associated item `VALUE_PLUS` not found for this enum
+...
+8609 |                 Self::Plus => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_PLUS))),
+     |                                                                          ^^^^^^^^^^ variant or associated item not found in `MathOperatorsType`
+
+error[E0599]: no variant or associated item named `VALUE_MINUS` found for enum `MathOperatorsType` in the current scope
+    --> src/my_schema.rs:8610:75
+     |
+8549 |     pub enum MathOperatorsType {
+     |     -------------------------- variant or associated item `VALUE_MINUS` not found for this enum
+...
+8610 |                 Self::Minus => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_MINUS))),
+     |                                                                           ^^^^^^^^^^^ variant or associated item not found in `MathOperatorsType`
+
+error[E0599]: no variant or associated item named `VALUE_TIMES` found for enum `MathOperatorsType` in the current scope
+    --> src/my_schema.rs:8611:75
+     |
+8549 |     pub enum MathOperatorsType {
+     |     -------------------------- variant or associated item `VALUE_TIMES` not found for this enum
+...
+8611 |                 Self::Times => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_TIMES))),
+     |                                                                           ^^^^^^^^^^^ variant or associated item not found in `MathOperatorsType`
+
+error[E0599]: no variant or associated item named `VALUE_DIVIDE` found for enum `MathOperatorsType` in the current scope
+    --> src/my_schema.rs:8612:76
+     |
+8549 |     pub enum MathOperatorsType {
+     |     -------------------------- variant or associated item `VALUE_DIVIDE` not found for this enum
+...
+8612 |                 Self::Divide => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_DIVIDE))),
+     |                                                                            ^^^^^^^^^^^^ variant or associated item not found in `MathOperatorsType`
+
+error[E0599]: no variant or associated item named `VALUE_MODULO` found for enum `MathOperatorsType` in the current scope
+    --> src/my_schema.rs:8613:76
+     |
+8549 |     pub enum MathOperatorsType {
+     |     -------------------------- variant or associated item `VALUE_MODULO` not found for this enum
+...
+8613 |                 Self::Modulo => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_MODULO))),
+     |                                                                            ^^^^^^^^^^^^ variant or associated item not found in `MathOperatorsType`
+
+error[E0599]: no variant or associated item named `VALUE_POWER` found for enum `MathOperatorsType` in the current scope
+    --> src/my_schema.rs:8614:75
+     |
+8549 |     pub enum MathOperatorsType {
+     |     -------------------------- variant or associated item `VALUE_POWER` not found for this enum
+...
+8614 |                 Self::Power => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_POWER))),
+     |                                                                           ^^^^^^^^^^^ variant or associated item not found in `MathOperatorsType`
+
+error[E0599]: no variant or associated item named `VALUE_REVERSE_POWER` found for enum `MathOperatorsType` in the current scope
+    --> src/my_schema.rs:8616:27
+     |
+8549 |     pub enum MathOperatorsType {
+     |     -------------------------- variant or associated item `VALUE_REVERSE_POWER` not found for this enum
+...
+8616 |                     Self::VALUE_REVERSE_POWER,
+     |                           ^^^^^^^^^^^^^^^^^^^ variant or associated item not found in `MathOperatorsType`
+
+error[E0599]: no variant or associated item named `VALUE_LN` found for enum `MathOperatorsType` in the current scope
+    --> src/my_schema.rs:8618:72
+     |
+8549 |     pub enum MathOperatorsType {
+     |     -------------------------- variant or associated item `VALUE_LN` not found for this enum
+...
+8618 |                 Self::Ln => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_LN))),
+     |                                                                        ^^^^^^^^ variant or associated item not found in `MathOperatorsType`
+
+error[E0599]: no variant or associated item named `VALUE_LOG` found for enum `MathOperatorsType` in the current scope
+    --> src/my_schema.rs:8619:73
+     |
+8549 |     pub enum MathOperatorsType {
+     |     -------------------------- variant or associated item `VALUE_LOG` not found for this enum
+...
+8619 |                 Self::Log => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_LOG))),
+     |                                                                         ^^^^^^^^^ variant or associated item not found in `MathOperatorsType`
+
+error[E0599]: no variant or associated item named `VALUE_EXP` found for enum `MathOperatorsType` in the current scope
+    --> src/my_schema.rs:8620:73
+     |
+8549 |     pub enum MathOperatorsType {
+     |     -------------------------- variant or associated item `VALUE_EXP` not found for this enum
+...
+8620 |                 Self::Exp => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_EXP))),
+     |                                                                         ^^^^^^^^^ variant or associated item not found in `MathOperatorsType`
+
+error[E0599]: no variant or associated item named `VALUE_RECIPROCAL` found for enum `MathOperatorsType` in the current scope
+    --> src/my_schema.rs:8621:80
+     |
+8549 |     pub enum MathOperatorsType {
+     |     -------------------------- variant or associated item `VALUE_RECIPROCAL` not found for this enum
+...
+8621 |                 Self::Reciprocal => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_RECIPROCAL))),
+     |                                                                                ^^^^^^^^^^^^^^^^ variant or associated item not found in `MathOperatorsType`
+
+error[E0599]: no variant or associated item named `VALUE_FACTORIAL` found for enum `MathOperatorsType` in the current scope
+    --> src/my_schema.rs:8622:79
+     |
+8549 |     pub enum MathOperatorsType {
+     |     -------------------------- variant or associated item `VALUE_FACTORIAL` not found for this enum
+...
+8622 |                 Self::Factorial => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_FACTORIAL))),
+     |                                                                               ^^^^^^^^^^^^^^^ variant or associated item not found in `MathOperatorsType`
+
+error[E0599]: no variant or associated item named `VALUE_TAN` found for enum `MathOperatorsType` in the current scope
+    --> src/my_schema.rs:8623:73
+     |
+8549 |     pub enum MathOperatorsType {
+     |     -------------------------- variant or associated item `VALUE_TAN` not found for this enum
+...
+8623 |                 Self::Tan => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_TAN))),
+     |                                                                         ^^^^^^^^^ variant or associated item not found in `MathOperatorsType`
+
+error[E0599]: no variant or associated item named `VALUE_COS` found for enum `MathOperatorsType` in the current scope
+    --> src/my_schema.rs:8624:73
+     |
+8549 |     pub enum MathOperatorsType {
+     |     -------------------------- variant or associated item `VALUE_COS` not found for this enum
+...
+8624 |                 Self::Cos => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_COS))),
+     |                                                                         ^^^^^^^^^ variant or associated item not found in `MathOperatorsType`
+
+error[E0599]: no variant or associated item named `VALUE_SIN` found for enum `MathOperatorsType` in the current scope
+    --> src/my_schema.rs:8625:73
+     |
+8549 |     pub enum MathOperatorsType {
+     |     -------------------------- variant or associated item `VALUE_SIN` not found for this enum
+...
+8625 |                 Self::Sin => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_SIN))),
+     |                                                                         ^^^^^^^^^ variant or associated item not found in `MathOperatorsType`
+
+error[E0599]: no variant or associated item named `VALUE_ATAN` found for enum `MathOperatorsType` in the current scope
+    --> src/my_schema.rs:8626:74
+     |
+8549 |     pub enum MathOperatorsType {
+     |     -------------------------- variant or associated item `VALUE_ATAN` not found for this enum
+...
+8626 |                 Self::Atan => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_ATAN))),
+     |                                                                          ^^^^^^^^^^ variant or associated item not found in `MathOperatorsType`
+
+error[E0599]: no variant or associated item named `VALUE_ATAN_2` found for enum `MathOperatorsType` in the current scope
+    --> src/my_schema.rs:8627:75
+     |
+8549 |     pub enum MathOperatorsType {
+     |     -------------------------- variant or associated item `VALUE_ATAN_2` not found for this enum
+...
+8627 |                 Self::Atan2 => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_ATAN_2))),
+     |                                                                           ^^^^^^^^^^^^ variant or associated item not found in `MathOperatorsType`
+
+error[E0599]: no variant or associated item named `VALUE_ACOS` found for enum `MathOperatorsType` in the current scope
+    --> src/my_schema.rs:8628:74
+     |
+8549 |     pub enum MathOperatorsType {
+     |     -------------------------- variant or associated item `VALUE_ACOS` not found for this enum
+...
+8628 |                 Self::Acos => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_ACOS))),
+     |                                                                          ^^^^^^^^^^ variant or associated item not found in `MathOperatorsType`
+
+error[E0599]: no variant or associated item named `VALUE_ASIN` found for enum `MathOperatorsType` in the current scope
+    --> src/my_schema.rs:8629:74
+     |
+8549 |     pub enum MathOperatorsType {
+     |     -------------------------- variant or associated item `VALUE_ASIN` not found for this enum
+...
+8629 |                 Self::Asin => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_ASIN))),
+     |                                                                          ^^^^^^^^^^ variant or associated item not found in `MathOperatorsType`
+
+error[E0599]: no variant or associated item named `VALUE_TANH` found for enum `MathOperatorsType` in the current scope
+    --> src/my_schema.rs:8630:74
+     |
+8549 |     pub enum MathOperatorsType {
+     |     -------------------------- variant or associated item `VALUE_TANH` not found for this enum
+...
+8630 |                 Self::Tanh => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_TANH))),
+     |                                                                          ^^^^^^^^^^ variant or associated item not found in `MathOperatorsType`
+
+error[E0599]: no variant or associated item named `VALUE_COSH` found for enum `MathOperatorsType` in the current scope
+    --> src/my_schema.rs:8631:74
+     |
+8549 |     pub enum MathOperatorsType {
+     |     -------------------------- variant or associated item `VALUE_COSH` not found for this enum
+...
+8631 |                 Self::Cosh => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_COSH))),
+     |                                                                          ^^^^^^^^^^ variant or associated item not found in `MathOperatorsType`
+
+error[E0599]: no variant or associated item named `VALUE_SINH` found for enum `MathOperatorsType` in the current scope
+    --> src/my_schema.rs:8632:74
+     |
+8549 |     pub enum MathOperatorsType {
+     |     -------------------------- variant or associated item `VALUE_SINH` not found for this enum
+...
+8632 |                 Self::Sinh => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_SINH))),
+     |                                                                          ^^^^^^^^^^ variant or associated item not found in `MathOperatorsType`
+
+error[E0599]: no variant or associated item named `VALUE_ATANH` found for enum `MathOperatorsType` in the current scope
+    --> src/my_schema.rs:8633:75
+     |
+8549 |     pub enum MathOperatorsType {
+     |     -------------------------- variant or associated item `VALUE_ATANH` not found for this enum
+...
+8633 |                 Self::Atanh => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_ATANH))),
+     |                                                                           ^^^^^^^^^^^ variant or associated item not found in `MathOperatorsType`
+
+error[E0599]: no variant or associated item named `VALUE_ACOSH` found for enum `MathOperatorsType` in the current scope
+    --> src/my_schema.rs:8634:75
+     |
+8549 |     pub enum MathOperatorsType {
+     |     -------------------------- variant or associated item `VALUE_ACOSH` not found for this enum
+...
+8634 |                 Self::Acosh => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_ACOSH))),
+     |                                                                           ^^^^^^^^^^^ variant or associated item not found in `MathOperatorsType`
+
+error[E0599]: no variant or associated item named `VALUE_ASINH` found for enum `MathOperatorsType` in the current scope
+    --> src/my_schema.rs:8635:75
+     |
+8549 |     pub enum MathOperatorsType {
+     |     -------------------------- variant or associated item `VALUE_ASINH` not found for this enum
+...
+8635 |                 Self::Asinh => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_ASINH))),
+     |                                                                           ^^^^^^^^^^^ variant or associated item not found in `MathOperatorsType`
+
+error[E0599]: no variant or associated item named `VALUE_SWAP` found for enum `MathOperatorsType` in the current scope
+    --> src/my_schema.rs:8636:74
+     |
+8549 |     pub enum MathOperatorsType {
+     |     -------------------------- variant or associated item `VALUE_SWAP` not found for this enum
+...
+8636 |                 Self::Swap => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_SWAP))),
+     |                                                                          ^^^^^^^^^^ variant or associated item not found in `MathOperatorsType`
+
+error[E0599]: no variant or associated item named `VALUE_DROP` found for enum `MathOperatorsType` in the current scope
+    --> src/my_schema.rs:8637:74
+     |
+8549 |     pub enum MathOperatorsType {
+     |     -------------------------- variant or associated item `VALUE_DROP` not found for this enum
+...
+8637 |                 Self::Drop => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_DROP))),
+     |                                                                          ^^^^^^^^^^ variant or associated item not found in `MathOperatorsType`
+
+error[E0599]: no variant or associated item named `VALUE_DUP` found for enum `MathOperatorsType` in the current scope
+    --> src/my_schema.rs:8638:73
+     |
+8549 |     pub enum MathOperatorsType {
+     |     -------------------------- variant or associated item `VALUE_DUP` not found for this enum
+...
+8638 |                 Self::Dup => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_DUP))),
+     |                                                                         ^^^^^^^^^ variant or associated item not found in `MathOperatorsType`
+
+error[E0599]: no variant or associated item named `VALUE_OVER` found for enum `MathOperatorsType` in the current scope
+    --> src/my_schema.rs:8639:74
+     |
+8549 |     pub enum MathOperatorsType {
+     |     -------------------------- variant or associated item `VALUE_OVER` not found for this enum
+...
+8639 |                 Self::Over => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_OVER))),
+     |                                                                          ^^^^^^^^^^ variant or associated item not found in `MathOperatorsType`
+
+error[E0599]: no variant or associated item named `VALUE_SHIFT_LEFT` found for enum `MathOperatorsType` in the current scope
+    --> src/my_schema.rs:8640:79
+     |
+8549 |     pub enum MathOperatorsType {
+     |     -------------------------- variant or associated item `VALUE_SHIFT_LEFT` not found for this enum
+...
+8640 |                 Self::ShiftLeft => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_SHIFT_LEFT))),
+     |                                                                               ^^^^^^^^^^^^^^^^ variant or associated item not found in `MathOperatorsType`
+
+error[E0599]: no variant or associated item named `VALUE_SHIFT_RIGHT` found for enum `MathOperatorsType` in the current scope
+    --> src/my_schema.rs:8641:80
+     |
+8549 |     pub enum MathOperatorsType {
+     |     -------------------------- variant or associated item `VALUE_SHIFT_RIGHT` not found for this enum
+...
+8641 |                 Self::ShiftRight => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_SHIFT_RIGHT))),
+     |                                                                                ^^^^^^^^^^^^^^^^^ variant or associated item not found in `MathOperatorsType`
+
+error[E0599]: no variant or associated item named `VALUE_BIT_AND` found for enum `MathOperatorsType` in the current scope
+    --> src/my_schema.rs:8642:76
+     |
+8549 |     pub enum MathOperatorsType {
+     |     -------------------------- variant or associated item `VALUE_BIT_AND` not found for this enum
+...
+8642 |                 Self::BitAnd => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_BIT_AND))),
+     |                                                                            ^^^^^^^^^^^^^ variant or associated item not found in `MathOperatorsType`
+
+error[E0599]: no variant or associated item named `VALUE_BIT_OR` found for enum `MathOperatorsType` in the current scope
+    --> src/my_schema.rs:8643:75
+     |
+8549 |     pub enum MathOperatorsType {
+     |     -------------------------- variant or associated item `VALUE_BIT_OR` not found for this enum
+...
+8643 |                 Self::BitOr => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_BIT_OR))),
+     |                                                                           ^^^^^^^^^^^^ variant or associated item not found in `MathOperatorsType`
+
+error[E0599]: no variant or associated item named `VALUE_AND` found for enum `MathOperatorsType` in the current scope
+    --> src/my_schema.rs:8644:73
+     |
+8549 |     pub enum MathOperatorsType {
+     |     -------------------------- variant or associated item `VALUE_AND` not found for this enum
+...
+8644 |                 Self::And => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_AND))),
+     |                                                                         ^^^^^^^^^ variant or associated item not found in `MathOperatorsType`
+
+error[E0599]: no variant or associated item named `VALUE_OR` found for enum `MathOperatorsType` in the current scope
+    --> src/my_schema.rs:8645:72
+     |
+8549 |     pub enum MathOperatorsType {
+     |     -------------------------- variant or associated item `VALUE_OR` not found for this enum
+...
+8645 |                 Self::Or => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_OR))),
+     |                                                                        ^^^^^^^^ variant or associated item not found in `MathOperatorsType`
+
+error[E0599]: no variant or associated item named `VALUE_NOT` found for enum `MathOperatorsType` in the current scope
+    --> src/my_schema.rs:8646:73
+     |
+8549 |     pub enum MathOperatorsType {
+     |     -------------------------- variant or associated item `VALUE_NOT` not found for this enum
+...
+8646 |                 Self::Not => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_NOT))),
+     |                                                                         ^^^^^^^^^ variant or associated item not found in `MathOperatorsType`
+
+error[E0599]: no variant or associated item named `VALUE_ABS` found for enum `MathOperatorsType` in the current scope
+    --> src/my_schema.rs:8647:73
+     |
+8549 |     pub enum MathOperatorsType {
+     |     -------------------------- variant or associated item `VALUE_ABS` not found for this enum
+...
+8647 |                 Self::Abs => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_ABS))),
+     |                                                                         ^^^^^^^^^ variant or associated item not found in `MathOperatorsType`
+
+error[E0599]: no variant or associated item named `VALUE_DIV` found for enum `MathOperatorsType` in the current scope
+    --> src/my_schema.rs:8648:73
+     |
+8549 |     pub enum MathOperatorsType {
+     |     -------------------------- variant or associated item `VALUE_DIV` not found for this enum
+...
+8648 |                 Self::Div => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_DIV))),
+     |                                                                         ^^^^^^^^^ variant or associated item not found in `MathOperatorsType`
+
+error[E0599]: no variant or associated item named `VALUE_INT` found for enum `MathOperatorsType` in the current scope
+    --> src/my_schema.rs:8649:73
+     |
+8549 |     pub enum MathOperatorsType {
+     |     -------------------------- variant or associated item `VALUE_INT` not found for this enum
+...
+8649 |                 Self::Int => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_INT))),
+     |                                                                         ^^^^^^^^^ variant or associated item not found in `MathOperatorsType`
+
+error[E0599]: no variant or associated item named `VALUE_GT` found for enum `MathOperatorsType` in the current scope
+    --> src/my_schema.rs:8650:72
+     |
+8549 |     pub enum MathOperatorsType {
+     |     -------------------------- variant or associated item `VALUE_GT` not found for this enum
+...
+8650 |                 Self::Gt => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_GT))),
+     |                                                                        ^^^^^^^^ variant or associated item not found in `MathOperatorsType`
+
+error[E0599]: no variant or associated item named `VALUE_GE` found for enum `MathOperatorsType` in the current scope
+    --> src/my_schema.rs:8651:72
+     |
+8549 |     pub enum MathOperatorsType {
+     |     -------------------------- variant or associated item `VALUE_GE` not found for this enum
+...
+8651 |                 Self::Ge => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_GE))),
+     |                                                                        ^^^^^^^^ variant or associated item not found in `MathOperatorsType`
+
+error[E0599]: no variant or associated item named `VALUE_LT` found for enum `MathOperatorsType` in the current scope
+    --> src/my_schema.rs:8652:72
+     |
+8549 |     pub enum MathOperatorsType {
+     |     -------------------------- variant or associated item `VALUE_LT` not found for this enum
+...
+8652 |                 Self::Lt => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_LT))),
+     |                                                                        ^^^^^^^^ variant or associated item not found in `MathOperatorsType`
+
+error[E0599]: no variant or associated item named `VALUE_LE` found for enum `MathOperatorsType` in the current scope
+    --> src/my_schema.rs:8653:72
+     |
+8549 |     pub enum MathOperatorsType {
+     |     -------------------------- variant or associated item `VALUE_LE` not found for this enum
+...
+8653 |                 Self::Le => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_LE))),
+     |                                                                        ^^^^^^^^ variant or associated item not found in `MathOperatorsType`
+
+error[E0599]: no variant or associated item named `VALUE_EQ` found for enum `MathOperatorsType` in the current scope
+    --> src/my_schema.rs:8654:72
+     |
+8549 |     pub enum MathOperatorsType {
+     |     -------------------------- variant or associated item `VALUE_EQ` not found for this enum
+...
+8654 |                 Self::Eq => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_EQ))),
+     |                                                                        ^^^^^^^^ variant or associated item not found in `MathOperatorsType`
+
+error[E0599]: no variant or associated item named `VALUE_NE` found for enum `MathOperatorsType` in the current scope
+    --> src/my_schema.rs:8655:72
+     |
+8549 |     pub enum MathOperatorsType {
+     |     -------------------------- variant or associated item `VALUE_NE` not found for this enum
+...
+8655 |                 Self::Ne => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_NE))),
+     |                                                                        ^^^^^^^^ variant or associated item not found in `MathOperatorsType`
+
+error[E0599]: no variant or associated item named `VALUE_MIN` found for enum `MathOperatorsType` in the current scope
+    --> src/my_schema.rs:8656:73
+     |
+8549 |     pub enum MathOperatorsType {
+     |     -------------------------- variant or associated item `VALUE_MIN` not found for this enum
+...
+8656 |                 Self::Min => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_MIN))),
+     |                                                                         ^^^^^^^^^ variant or associated item not found in `MathOperatorsType`
+
+error[E0599]: no variant or associated item named `VALUE_MAX` found for enum `MathOperatorsType` in the current scope
+    --> src/my_schema.rs:8657:73
+     |
+8549 |     pub enum MathOperatorsType {
+     |     -------------------------- variant or associated item `VALUE_MAX` not found for this enum
+...
+8657 |                 Self::Max => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_MAX))),
+     |                                                                         ^^^^^^^^^ variant or associated item not found in `MathOperatorsType`
+
+error[E0599]: no variant or associated item named `VALUE_XOR` found for enum `MathOperatorsType` in the current scope
+    --> src/my_schema.rs:8658:73
+     |
+8549 |     pub enum MathOperatorsType {
+     |     -------------------------- variant or associated item `VALUE_XOR` not found for this enum
+...
+8658 |                 Self::Xor => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_XOR))),
+     |                                                                         ^^^^^^^^^ variant or associated item not found in `MathOperatorsType`
+
+error[E0599]: no variant or associated item named `VALUE_BIT_NOT` found for enum `MathOperatorsType` in the current scope
+    --> src/my_schema.rs:8659:76
+     |
+8549 |     pub enum MathOperatorsType {
+     |     -------------------------- variant or associated item `VALUE_BIT_NOT` not found for this enum
+...
+8659 |                 Self::BitNot => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_BIT_NOT))),
+     |                                                                            ^^^^^^^^^^^^^ variant or associated item not found in `MathOperatorsType`
+
+error[E0599]: no variant or associated item named `VALUE_NRZL` found for enum `PcmType` in the current scope
+    --> src/my_schema.rs:9661:74
+     |
+9644 |     pub enum PcmType {
+     |     ---------------- variant or associated item `VALUE_NRZL` not found for this enum
+...
+9661 |                 Self::Nrzl => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_NRZL))),
+     |                                                                          ^^^^^^^^^^ variant or associated item not found in `PcmType`
+
+error[E0599]: no variant or associated item named `VALUE_NRZM` found for enum `PcmType` in the current scope
+    --> src/my_schema.rs:9662:74
+     |
+9644 |     pub enum PcmType {
+     |     ---------------- variant or associated item `VALUE_NRZM` not found for this enum
+...
+9662 |                 Self::Nrzm => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_NRZM))),
+     |                                                                          ^^^^^^^^^^ variant or associated item not found in `PcmType`
+
+error[E0599]: no variant or associated item named `VALUE_NRZS` found for enum `PcmType` in the current scope
+    --> src/my_schema.rs:9663:74
+     |
+9644 |     pub enum PcmType {
+     |     ---------------- variant or associated item `VALUE_NRZS` not found for this enum
+...
+9663 |                 Self::Nrzs => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_NRZS))),
+     |                                                                          ^^^^^^^^^^ variant or associated item not found in `PcmType`
+
+error[E0599]: no variant or associated item named `VALUE_BI_PHASE_L` found for enum `PcmType` in the current scope
+    --> src/my_schema.rs:9664:78
+     |
+9644 |     pub enum PcmType {
+     |     ---------------- variant or associated item `VALUE_BI_PHASE_L` not found for this enum
+...
+9664 |                 Self::BiPhaseL => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_BI_PHASE_L))),
+     |                                                                              ^^^^^^^^^^^^^^^^ variant or associated item not found in `PcmType`
+
+error[E0599]: no variant or associated item named `VALUE_BI_PHASE_M` found for enum `PcmType` in the current scope
+    --> src/my_schema.rs:9665:78
+     |
+9644 |     pub enum PcmType {
+     |     ---------------- variant or associated item `VALUE_BI_PHASE_M` not found for this enum
+...
+9665 |                 Self::BiPhaseM => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_BI_PHASE_M))),
+     |                                                                              ^^^^^^^^^^^^^^^^ variant or associated item not found in `PcmType`
+
+error[E0599]: no variant or associated item named `VALUE_BI_PHASE_S` found for enum `PcmType` in the current scope
+    --> src/my_schema.rs:9666:78
+     |
+9644 |     pub enum PcmType {
+     |     ---------------- variant or associated item `VALUE_BI_PHASE_S` not found for this enum
+...
+9666 |                 Self::BiPhaseS => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_BI_PHASE_S))),
+     |                                                                              ^^^^^^^^^^^^^^^^ variant or associated item not found in `PcmType`
+
+error[E0599]: no variant or associated item named `VALUE_EVEN` found for enum `ParityFormType` in the current scope
+     --> src/my_schema.rs:10180:74
+      |
+10167 |     pub enum ParityFormType {
+      |     ----------------------- variant or associated item `VALUE_EVEN` not found for this enum
+...
+10180 |                 Self::Even => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_EVEN))),
+      |                                                                          ^^^^^^^^^^ variant or associated item not found in `ParityFormType`
+
+error[E0599]: no variant or associated item named `VALUE_ODD` found for enum `ParityFormType` in the current scope
+     --> src/my_schema.rs:10181:73
+      |
+10167 |     pub enum ParityFormType {
+      |     ----------------------- variant or associated item `VALUE_ODD` not found for this enum
+...
+10181 |                 Self::Odd => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_ODD))),
+      |                                                                         ^^^^^^^^^ variant or associated item not found in `ParityFormType`
+
+error[E0599]: no variant or associated item named `VALUE_DECIMAL` found for enum `RadixType` in the current scope
+     --> src/my_schema.rs:10365:77
+      |
+10350 |     pub enum RadixType {
+      |     ------------------ variant or associated item `VALUE_DECIMAL` not found for this enum
+...
+10365 |                 Self::Decimal => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_DECIMAL))),
+      |                                                                             ^^^^^^^^^^^^^ variant or associated item not found in `RadixType`
+
+error[E0599]: no variant or associated item named `VALUE_HEXADECIMAL` found for enum `RadixType` in the current scope
+     --> src/my_schema.rs:10367:64
+      |
+10350 |     pub enum RadixType {
+      |     ------------------ variant or associated item `VALUE_HEXADECIMAL` not found for this enum
+...
+10367 |                     Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_HEXADECIMAL)))
+      |                                                                ^^^^^^^^^^^^^^^^^ variant or associated item not found in `RadixType`
+
+error[E0599]: no variant or associated item named `VALUE_OCTAL` found for enum `RadixType` in the current scope
+     --> src/my_schema.rs:10369:75
+      |
+10350 |     pub enum RadixType {
+      |     ------------------ variant or associated item `VALUE_OCTAL` not found for this enum
+...
+10369 |                 Self::Octal => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_OCTAL))),
+      |                                                                           ^^^^^^^^^^^ variant or associated item not found in `RadixType`
+
+error[E0599]: no variant or associated item named `VALUE_BINARY` found for enum `RadixType` in the current scope
+     --> src/my_schema.rs:10370:76
+      |
+10350 |     pub enum RadixType {
+      |     ------------------ variant or associated item `VALUE_BINARY` not found for this enum
+...
+10370 |                 Self::Binary => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_BINARY))),
+      |                                                                            ^^^^^^^^^^^^ variant or associated item not found in `RadixType`
+
+error[E0599]: no variant or associated item named `VALUE_OUTSIDE` found for enum `RangeFormType` in the current scope
+     --> src/my_schema.rs:10408:77
+      |
+10395 |     pub enum RangeFormType {
+      |     ---------------------- variant or associated item `VALUE_OUTSIDE` not found for this enum
+...
+10408 |                 Self::Outside => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_OUTSIDE))),
+      |                                                                             ^^^^^^^^^^^^^ variant or associated item not found in `RangeFormType`
+
+error[E0599]: no variant or associated item named `VALUE_INSIDE` found for enum `RangeFormType` in the current scope
+     --> src/my_schema.rs:10409:76
+      |
+10395 |     pub enum RangeFormType {
+      |     ---------------------- variant or associated item `VALUE_INSIDE` not found for this enum
+...
+10409 |                 Self::Inside => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_INSIDE))),
+      |                                                                            ^^^^^^^^^^^^ variant or associated item not found in `RangeFormType`
+
+error[E0599]: no variant or associated item named `VALUE_CONTAINER_START` found for enum `ReferenceLocationType` in the current scope
+     --> src/my_schema.rs:10543:27
+      |
+10527 |     pub enum ReferenceLocationType {
+      |     ------------------------------ variant or associated item `VALUE_CONTAINER_START` not found for this enum
+...
+10543 |                     Self::VALUE_CONTAINER_START,
+      |                           ^^^^^^^^^^^^^^^^^^^^^ variant or associated item not found in `ReferenceLocationType`
+
+error[E0599]: no variant or associated item named `VALUE_CONTAINER_END` found for enum `ReferenceLocationType` in the current scope
+     --> src/my_schema.rs:10546:27
+      |
+10527 |     pub enum ReferenceLocationType {
+      |     ------------------------------ variant or associated item `VALUE_CONTAINER_END` not found for this enum
+...
+10546 |                     Self::VALUE_CONTAINER_END,
+      |                           ^^^^^^^^^^^^^^^^^^^ variant or associated item not found in `ReferenceLocationType`
+
+error[E0599]: no variant or associated item named `VALUE_PREVIOUS_ENTRY` found for enum `ReferenceLocationType` in the current scope
+     --> src/my_schema.rs:10549:27
+      |
+10527 |     pub enum ReferenceLocationType {
+      |     ------------------------------ variant or associated item `VALUE_PREVIOUS_ENTRY` not found for this enum
+...
+10549 |                     Self::VALUE_PREVIOUS_ENTRY,
+      |                           ^^^^^^^^^^^^^^^^^^^^ variant or associated item not found in `ReferenceLocationType`
+
+error[E0599]: no variant or associated item named `VALUE_NEXT_ENTRY` found for enum `ReferenceLocationType` in the current scope
+     --> src/my_schema.rs:10551:79
+      |
+10527 |     pub enum ReferenceLocationType {
+      |     ------------------------------ variant or associated item `VALUE_NEXT_ENTRY` not found for this enum
+...
+10551 |                 Self::NextEntry => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_NEXT_ENTRY))),
+      |                                                                               ^^^^^^^^^^^^^^^^ variant or associated item not found in `ReferenceLocationType`
+
+error[E0599]: no variant or associated item named `VALUE_START` found for enum `ReferencePointType` in the current scope
+     --> src/my_schema.rs:10589:75
+      |
+10576 |     pub enum ReferencePointType {
+      |     --------------------------- variant or associated item `VALUE_START` not found for this enum
+...
+10589 |                 Self::Start => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_START))),
+      |                                                                           ^^^^^^^^^^^ variant or associated item not found in `ReferencePointType`
+
+error[E0599]: no variant or associated item named `VALUE_END` found for enum `ReferencePointType` in the current scope
+     --> src/my_schema.rs:10590:73
+      |
+10576 |     pub enum ReferencePointType {
+      |     --------------------------- variant or associated item `VALUE_END` not found for this enum
+...
+10590 |                 Self::End => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_END))),
+      |                                                                         ^^^^^^^^^ variant or associated item not found in `ReferencePointType`
+
+error[E0599]: no variant or associated item named `VALUE_US_ASCII` found for enum `StringEncodingType` in the current scope
+     --> src/my_schema.rs:11754:77
+      |
+11733 |     pub enum StringEncodingType {
+      |     --------------------------- variant or associated item `VALUE_US_ASCII` not found for this enum
+...
+11754 |                 Self::UsAscii => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_US_ASCII))),
+      |                                                                             ^^^^^^^^^^^^^^ variant or associated item not found in `StringEncodingType`
+
+error[E0599]: no variant or associated item named `VALUE_ISO_88591` found for enum `StringEncodingType` in the current scope
+     --> src/my_schema.rs:11755:78
+      |
+11733 |     pub enum StringEncodingType {
+      |     --------------------------- variant or associated item `VALUE_ISO_88591` not found for this enum
+...
+11755 |                 Self::Iso88591 => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_ISO_88591))),
+      |                                                                              ^^^^^^^^^^^^^^^ variant or associated item not found in `StringEncodingType`
+
+error[E0599]: no variant or associated item named `VALUE_WINDOWS_1252` found for enum `StringEncodingType` in the current scope
+     --> src/my_schema.rs:11757:64
+      |
+11733 |     pub enum StringEncodingType {
+      |     --------------------------- variant or associated item `VALUE_WINDOWS_1252` not found for this enum
+...
+11757 |                     Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_WINDOWS_1252)))
+      |                                                                ^^^^^^^^^^^^^^^^^^ variant or associated item not found in `StringEncodingType`
+
+error[E0599]: no variant or associated item named `VALUE_UTF_8` found for enum `StringEncodingType` in the current scope
+     --> src/my_schema.rs:11759:74
+      |
+11733 |     pub enum StringEncodingType {
+      |     --------------------------- variant or associated item `VALUE_UTF_8` not found for this enum
+...
+11759 |                 Self::Utf8 => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_UTF_8))),
+      |                                                                          ^^^^^^^^^^^ variant or associated item not found in `StringEncodingType`
+
+error[E0599]: no variant or associated item named `VALUE_UTF_16` found for enum `StringEncodingType` in the current scope
+     --> src/my_schema.rs:11760:75
+      |
+11733 |     pub enum StringEncodingType {
+      |     --------------------------- variant or associated item `VALUE_UTF_16` not found for this enum
+...
+11760 |                 Self::Utf16 => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_UTF_16))),
+      |                                                                           ^^^^^^^^^^^^ variant or associated item not found in `StringEncodingType`
+
+error[E0599]: no variant or associated item named `VALUE_UTF_16_LE` found for enum `StringEncodingType` in the current scope
+     --> src/my_schema.rs:11761:77
+      |
+11733 |     pub enum StringEncodingType {
+      |     --------------------------- variant or associated item `VALUE_UTF_16_LE` not found for this enum
+...
+11761 |                 Self::Utf16Le => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_UTF_16_LE))),
+      |                                                                             ^^^^^^^^^^^^^^^ variant or associated item not found in `StringEncodingType`
+
+error[E0599]: no variant or associated item named `VALUE_UTF_16_BE` found for enum `StringEncodingType` in the current scope
+     --> src/my_schema.rs:11762:77
+      |
+11733 |     pub enum StringEncodingType {
+      |     --------------------------- variant or associated item `VALUE_UTF_16_BE` not found for this enum
+...
+11762 |                 Self::Utf16Be => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_UTF_16_BE))),
+      |                                                                             ^^^^^^^^^^^^^^^ variant or associated item not found in `StringEncodingType`
+
+error[E0599]: no variant or associated item named `VALUE_UTF_32` found for enum `StringEncodingType` in the current scope
+     --> src/my_schema.rs:11763:75
+      |
+11733 |     pub enum StringEncodingType {
+      |     --------------------------- variant or associated item `VALUE_UTF_32` not found for this enum
+...
+11763 |                 Self::Utf32 => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_UTF_32))),
+      |                                                                           ^^^^^^^^^^^^ variant or associated item not found in `StringEncodingType`
+
+error[E0599]: no variant or associated item named `VALUE_UTF_32_LE` found for enum `StringEncodingType` in the current scope
+     --> src/my_schema.rs:11764:77
+      |
+11733 |     pub enum StringEncodingType {
+      |     --------------------------- variant or associated item `VALUE_UTF_32_LE` not found for this enum
+...
+11764 |                 Self::Utf32Le => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_UTF_32_LE))),
+      |                                                                             ^^^^^^^^^^^^^^^ variant or associated item not found in `StringEncodingType`
+
+error[E0599]: no variant or associated item named `VALUE_UTF_32_BE` found for enum `StringEncodingType` in the current scope
+     --> src/my_schema.rs:11765:77
+      |
+11733 |     pub enum StringEncodingType {
+      |     --------------------------- variant or associated item `VALUE_UTF_32_BE` not found for this enum
+...
+11765 |                 Self::Utf32Be => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_UTF_32_BE))),
+      |                                                                             ^^^^^^^^^^^^^^^ variant or associated item not found in `StringEncodingType`
+
+error[E0599]: no variant or associated item named `VALUE_ASSET` found for enum `SystemTypeType` in the current scope
+     --> src/my_schema.rs:11954:75
+      |
+11939 |     pub enum SystemTypeType {
+      |     ----------------------- variant or associated item `VALUE_ASSET` not found for this enum
+...
+11954 |                 Self::Asset => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_ASSET))),
+      |                                                                           ^^^^^^^^^^^ variant or associated item not found in `SystemTypeType`
+
+error[E0599]: no variant or associated item named `VALUE_ASSET_GROUP` found for enum `SystemTypeType` in the current scope
+     --> src/my_schema.rs:11955:80
+      |
+11939 |     pub enum SystemTypeType {
+      |     ----------------------- variant or associated item `VALUE_ASSET_GROUP` not found for this enum
+...
+11955 |                 Self::AssetGroup => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_ASSET_GROUP))),
+      |                                                                                ^^^^^^^^^^^^^^^^^ variant or associated item not found in `SystemTypeType`
+
+error[E0599]: no variant or associated item named `VALUE_ASSET_COMPONENT` found for enum `SystemTypeType` in the current scope
+     --> src/my_schema.rs:11957:27
+      |
+11939 |     pub enum SystemTypeType {
+      |     ----------------------- variant or associated item `VALUE_ASSET_COMPONENT` not found for this enum
+...
+11957 |                     Self::VALUE_ASSET_COMPONENT,
+      |                           ^^^^^^^^^^^^^^^^^^^^^ variant or associated item not found in `SystemTypeType`
+
+error[E0599]: no variant or associated item named `VALUE_UNKNOWN` found for enum `SystemTypeType` in the current scope
+     --> src/my_schema.rs:11959:77
+      |
+11939 |     pub enum SystemTypeType {
+      |     ----------------------- variant or associated item `VALUE_UNKNOWN` not found for this enum
+...
+11959 |                 Self::Unknown => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_UNKNOWN))),
+      |                                                                             ^^^^^^^^^^^^^ variant or associated item not found in `SystemTypeType`
+
+error[E0599]: no variant or associated item named `VALUE_TELEMETERED` found for enum `TelemetryDataSourceType` in the current scope
+     --> src/my_schema.rs:12001:64
+      |
+11984 |     pub enum TelemetryDataSourceType {
+      |     -------------------------------- variant or associated item `VALUE_TELEMETERED` not found for this enum
+...
+12001 |                     Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_TELEMETERED)))
+      |                                                                ^^^^^^^^^^^^^^^^^ variant or associated item not found in `TelemetryDataSourceType`
+
+error[E0599]: no variant or associated item named `VALUE_DERIVED` found for enum `TelemetryDataSourceType` in the current scope
+     --> src/my_schema.rs:12003:77
+      |
+11984 |     pub enum TelemetryDataSourceType {
+      |     -------------------------------- variant or associated item `VALUE_DERIVED` not found for this enum
+...
+12003 |                 Self::Derived => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_DERIVED))),
+      |                                                                             ^^^^^^^^^^^^^ variant or associated item not found in `TelemetryDataSourceType`
+
+error[E0599]: no variant or associated item named `VALUE_CONSTANT` found for enum `TelemetryDataSourceType` in the current scope
+     --> src/my_schema.rs:12004:78
+      |
+11984 |     pub enum TelemetryDataSourceType {
+      |     -------------------------------- variant or associated item `VALUE_CONSTANT` not found for this enum
+...
+12004 |                 Self::Constant => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_CONSTANT))),
+      |                                                                              ^^^^^^^^^^^^^^ variant or associated item not found in `TelemetryDataSourceType`
+
+error[E0599]: no variant or associated item named `VALUE_LOCAL` found for enum `TelemetryDataSourceType` in the current scope
+     --> src/my_schema.rs:12005:75
+      |
+11984 |     pub enum TelemetryDataSourceType {
+      |     -------------------------------- variant or associated item `VALUE_LOCAL` not found for this enum
+...
+12005 |                 Self::Local => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_LOCAL))),
+      |                                                                           ^^^^^^^^^^^ variant or associated item not found in `TelemetryDataSourceType`
+
+error[E0599]: no variant or associated item named `VALUE_GROUND` found for enum `TelemetryDataSourceType` in the current scope
+     --> src/my_schema.rs:12006:76
+      |
+11984 |     pub enum TelemetryDataSourceType {
+      |     -------------------------------- variant or associated item `VALUE_GROUND` not found for this enum
+...
+12006 |                 Self::Ground => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_GROUND))),
+      |                                                                            ^^^^^^^^^^^^ variant or associated item not found in `TelemetryDataSourceType`
+
+error[E0599]: no variant or associated item named `VALUE_SECONDS` found for enum `TimeAssociationUnitType` in the current scope
+     --> src/my_schema.rs:12272:77
+      |
+12251 |     pub enum TimeAssociationUnitType {
+      |     -------------------------------- variant or associated item `VALUE_SECONDS` not found for this enum
+...
+12272 |                 Self::Seconds => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_SECONDS))),
+      |                                                                             ^^^^^^^^^^^^^ variant or associated item not found in `TimeAssociationUnitType`
+
+error[E0599]: no variant or associated item named `VALUE_MILLISECONDS` found for enum `TimeAssociationUnitType` in the current scope
+     --> src/my_schema.rs:12274:64
+      |
+12251 |     pub enum TimeAssociationUnitType {
+      |     -------------------------------- variant or associated item `VALUE_MILLISECONDS` not found for this enum
+...
+12274 |                     Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_MILLISECONDS)))
+      |                                                                ^^^^^^^^^^^^^^^^^^ variant or associated item not found in `TimeAssociationUnitType`
+
+error[E0599]: no variant or associated item named `VALUE_MICROSECONDS` found for enum `TimeAssociationUnitType` in the current scope
+     --> src/my_schema.rs:12277:64
+      |
+12251 |     pub enum TimeAssociationUnitType {
+      |     -------------------------------- variant or associated item `VALUE_MICROSECONDS` not found for this enum
+...
+12277 |                     Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_MICROSECONDS)))
+      |                                                                ^^^^^^^^^^^^^^^^^^ variant or associated item not found in `TimeAssociationUnitType`
+
+error[E0599]: no variant or associated item named `VALUE_NANOSECONDS` found for enum `TimeAssociationUnitType` in the current scope
+     --> src/my_schema.rs:12280:64
+      |
+12251 |     pub enum TimeAssociationUnitType {
+      |     -------------------------------- variant or associated item `VALUE_NANOSECONDS` not found for this enum
+...
+12280 |                     Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_NANOSECONDS)))
+      |                                                                ^^^^^^^^^^^^^^^^^ variant or associated item not found in `TimeAssociationUnitType`
+
+error[E0599]: no variant or associated item named `VALUE_PICOSECONDS` found for enum `TimeAssociationUnitType` in the current scope
+     --> src/my_schema.rs:12283:64
+      |
+12251 |     pub enum TimeAssociationUnitType {
+      |     -------------------------------- variant or associated item `VALUE_PICOSECONDS` not found for this enum
+...
+12283 |                     Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_PICOSECONDS)))
+      |                                                                ^^^^^^^^^^^^^^^^^ variant or associated item not found in `TimeAssociationUnitType`
+
+error[E0599]: no variant or associated item named `VALUE_MINUTES` found for enum `TimeAssociationUnitType` in the current scope
+     --> src/my_schema.rs:12285:77
+      |
+12251 |     pub enum TimeAssociationUnitType {
+      |     -------------------------------- variant or associated item `VALUE_MINUTES` not found for this enum
+...
+12285 |                 Self::Minutes => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_MINUTES))),
+      |                                                                             ^^^^^^^^^^^^^ variant or associated item not found in `TimeAssociationUnitType`
+
+error[E0599]: no variant or associated item named `VALUE_HOURS` found for enum `TimeAssociationUnitType` in the current scope
+     --> src/my_schema.rs:12286:75
+      |
+12251 |     pub enum TimeAssociationUnitType {
+      |     -------------------------------- variant or associated item `VALUE_HOURS` not found for this enum
+...
+12286 |                 Self::Hours => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_HOURS))),
+      |                                                                           ^^^^^^^^^^^ variant or associated item not found in `TimeAssociationUnitType`
+
+error[E0599]: no variant or associated item named `VALUE_DAYS` found for enum `TimeAssociationUnitType` in the current scope
+     --> src/my_schema.rs:12287:74
+      |
+12251 |     pub enum TimeAssociationUnitType {
+      |     -------------------------------- variant or associated item `VALUE_DAYS` not found for this enum
+...
+12287 |                 Self::Days => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_DAYS))),
+      |                                                                          ^^^^^^^^^^ variant or associated item not found in `TimeAssociationUnitType`
+
+error[E0599]: no variant or associated item named `VALUE_MONTHS` found for enum `TimeAssociationUnitType` in the current scope
+     --> src/my_schema.rs:12288:76
+      |
+12251 |     pub enum TimeAssociationUnitType {
+      |     -------------------------------- variant or associated item `VALUE_MONTHS` not found for this enum
+...
+12288 |                 Self::Months => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_MONTHS))),
+      |                                                                            ^^^^^^^^^^^^ variant or associated item not found in `TimeAssociationUnitType`
+
+error[E0599]: no variant or associated item named `VALUE_YEARS` found for enum `TimeAssociationUnitType` in the current scope
+     --> src/my_schema.rs:12289:75
+      |
+12251 |     pub enum TimeAssociationUnitType {
+      |     -------------------------------- variant or associated item `VALUE_YEARS` not found for this enum
+...
+12289 |                 Self::Years => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_YEARS))),
+      |                                                                           ^^^^^^^^^^^ variant or associated item not found in `TimeAssociationUnitType`
+
+error[E0599]: no variant or associated item named `VALUE_COMMAND_RELEASE` found for enum `TimeWindowIsRelativeToType` in the current scope
+     --> src/my_schema.rs:12434:27
+      |
+12420 |     pub enum TimeWindowIsRelativeToType {
+      |     ----------------------------------- variant or associated item `VALUE_COMMAND_RELEASE` not found for this enum
+...
+12434 |                     Self::VALUE_COMMAND_RELEASE,
+      |                           ^^^^^^^^^^^^^^^^^^^^^ variant or associated item not found in `TimeWindowIsRelativeToType`
+
+error[E0599]: no variant or associated item named `VALUE_TIME_LAST_VERIFIER_PASSED` found for enum `TimeWindowIsRelativeToType` in the current scope
+     --> src/my_schema.rs:12437:27
+      |
+12420 |     pub enum TimeWindowIsRelativeToType {
+      |     ----------------------------------- variant or associated item `VALUE_TIME_LAST_VERIFIER_PASSED` not found for this enum
+...
+12437 |                     Self::VALUE_TIME_LAST_VERIFIER_PASSED,
+      |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ variant or associated item not found in `TimeWindowIsRelativeToType`
+
+error[E0599]: no variant or associated item named `VALUE_CALIBRATED` found for enum `UnitFormType` in the current scope
+     --> src/my_schema.rs:12698:80
+      |
+12684 |     pub enum UnitFormType {
+      |     --------------------- variant or associated item `VALUE_CALIBRATED` not found for this enum
+...
+12698 |                 Self::Calibrated => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_CALIBRATED))),
+      |                                                                                ^^^^^^^^^^^^^^^^ variant or associated item not found in `UnitFormType`
+
+error[E0599]: no variant or associated item named `VALUE_UNCALIBRATED` found for enum `UnitFormType` in the current scope
+     --> src/my_schema.rs:12700:64
+      |
+12684 |     pub enum UnitFormType {
+      |     --------------------- variant or associated item `VALUE_UNCALIBRATED` not found for this enum
+...
+12700 |                     Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_UNCALIBRATED)))
+      |                                                                ^^^^^^^^^^^^^^^^^^ variant or associated item not found in `UnitFormType`
+
+error[E0599]: no variant or associated item named `VALUE_RAW` found for enum `UnitFormType` in the current scope
+     --> src/my_schema.rs:12702:73
+      |
+12684 |     pub enum UnitFormType {
+      |     --------------------- variant or associated item `VALUE_RAW` not found for this enum
+...
+12702 |                 Self::Raw => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_RAW))),
+      |                                                                         ^^^^^^^^^ variant or associated item not found in `UnitFormType`
+
+error[E0599]: no variant or associated item named `VALUE_UNKNOWN` found for enum `ValidationStatusType` in the current scope
+     --> src/my_schema.rs:12874:77
+      |
+12856 |     pub enum ValidationStatusType {
+      |     ----------------------------- variant or associated item `VALUE_UNKNOWN` not found for this enum
+...
+12874 |                 Self::Unknown => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_UNKNOWN))),
+      |                                                                             ^^^^^^^^^^^^^ variant or associated item not found in `ValidationStatusType`
+
+error[E0599]: no variant or associated item named `VALUE_WORKING` found for enum `ValidationStatusType` in the current scope
+     --> src/my_schema.rs:12875:77
+      |
+12856 |     pub enum ValidationStatusType {
+      |     ----------------------------- variant or associated item `VALUE_WORKING` not found for this enum
+...
+12875 |                 Self::Working => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_WORKING))),
+      |                                                                             ^^^^^^^^^^^^^ variant or associated item not found in `ValidationStatusType`
+
+error[E0599]: no variant or associated item named `VALUE_DRAFT` found for enum `ValidationStatusType` in the current scope
+     --> src/my_schema.rs:12876:75
+      |
+12856 |     pub enum ValidationStatusType {
+      |     ----------------------------- variant or associated item `VALUE_DRAFT` not found for this enum
+...
+12876 |                 Self::Draft => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_DRAFT))),
+      |                                                                           ^^^^^^^^^^^ variant or associated item not found in `ValidationStatusType`
+
+error[E0599]: no variant or associated item named `VALUE_TEST` found for enum `ValidationStatusType` in the current scope
+     --> src/my_schema.rs:12877:74
+      |
+12856 |     pub enum ValidationStatusType {
+      |     ----------------------------- variant or associated item `VALUE_TEST` not found for this enum
+...
+12877 |                 Self::Test => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_TEST))),
+      |                                                                          ^^^^^^^^^^ variant or associated item not found in `ValidationStatusType`
+
+error[E0599]: no variant or associated item named `VALUE_VALIDATED` found for enum `ValidationStatusType` in the current scope
+     --> src/my_schema.rs:12878:79
+      |
+12856 |     pub enum ValidationStatusType {
+      |     ----------------------------- variant or associated item `VALUE_VALIDATED` not found for this enum
+...
+12878 |                 Self::Validated => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_VALIDATED))),
+      |                                                                               ^^^^^^^^^^^^^^^ variant or associated item not found in `ValidationStatusType`
+
+error[E0599]: no variant or associated item named `VALUE_RELEASED` found for enum `ValidationStatusType` in the current scope
+     --> src/my_schema.rs:12879:78
+      |
+12856 |     pub enum ValidationStatusType {
+      |     ----------------------------- variant or associated item `VALUE_RELEASED` not found for this enum
+...
+12879 |                 Self::Released => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_RELEASED))),
+      |                                                                              ^^^^^^^^^^^^^^ variant or associated item not found in `ValidationStatusType`
+
+error[E0599]: no variant or associated item named `VALUE_WITHDRAWN` found for enum `ValidationStatusType` in the current scope
+     --> src/my_schema.rs:12880:79
+      |
+12856 |     pub enum ValidationStatusType {
+      |     ----------------------------- variant or associated item `VALUE_WITHDRAWN` not found for this enum
+...
+12880 |                 Self::Withdrawn => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_WITHDRAWN))),
+      |                                                                               ^^^^^^^^^^^^^^^ variant or associated item not found in `ValidationStatusType`
+
+error[E0599]: no variant or associated item named `VALUE_RELEASE` found for enum `VerifierEnumerationType` in the current scope
+     --> src/my_schema.rs:13128:77
+      |
+13108 |     pub enum VerifierEnumerationType {
+      |     -------------------------------- variant or associated item `VALUE_RELEASE` not found for this enum
+...
+13128 |                 Self::Release => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_RELEASE))),
+      |                                                                             ^^^^^^^^^^^^^ variant or associated item not found in `VerifierEnumerationType`
+
+error[E0599]: no variant or associated item named `VALUE_TRANSFERRED_TO_RANGE` found for enum `VerifierEnumerationType` in the current scope
+     --> src/my_schema.rs:13130:27
+      |
+13108 |     pub enum VerifierEnumerationType {
+      |     -------------------------------- variant or associated item `VALUE_TRANSFERRED_TO_RANGE` not found for this enum
+...
+13130 |                     Self::VALUE_TRANSFERRED_TO_RANGE,
+      |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^ variant or associated item not found in `VerifierEnumerationType`
+
+error[E0599]: no variant or associated item named `VALUE_SENT_FROM_RANGE` found for enum `VerifierEnumerationType` in the current scope
+     --> src/my_schema.rs:13133:27
+      |
+13108 |     pub enum VerifierEnumerationType {
+      |     -------------------------------- variant or associated item `VALUE_SENT_FROM_RANGE` not found for this enum
+...
+13133 |                     Self::VALUE_SENT_FROM_RANGE,
+      |                           ^^^^^^^^^^^^^^^^^^^^^ variant or associated item not found in `VerifierEnumerationType`
+
+error[E0599]: no variant or associated item named `VALUE_RECEIVED` found for enum `VerifierEnumerationType` in the current scope
+     --> src/my_schema.rs:13135:78
+      |
+13108 |     pub enum VerifierEnumerationType {
+      |     -------------------------------- variant or associated item `VALUE_RECEIVED` not found for this enum
+...
+13135 |                 Self::Received => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_RECEIVED))),
+      |                                                                              ^^^^^^^^^^^^^^ variant or associated item not found in `VerifierEnumerationType`
+
+error[E0599]: no variant or associated item named `VALUE_ACCEPTED` found for enum `VerifierEnumerationType` in the current scope
+     --> src/my_schema.rs:13136:78
+      |
+13108 |     pub enum VerifierEnumerationType {
+      |     -------------------------------- variant or associated item `VALUE_ACCEPTED` not found for this enum
+...
+13136 |                 Self::Accepted => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_ACCEPTED))),
+      |                                                                              ^^^^^^^^^^^^^^ variant or associated item not found in `VerifierEnumerationType`
+
+error[E0599]: no variant or associated item named `VALUE_QUEUED` found for enum `VerifierEnumerationType` in the current scope
+     --> src/my_schema.rs:13137:76
+      |
+13108 |     pub enum VerifierEnumerationType {
+      |     -------------------------------- variant or associated item `VALUE_QUEUED` not found for this enum
+...
+13137 |                 Self::Queued => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_QUEUED))),
+      |                                                                            ^^^^^^^^^^^^ variant or associated item not found in `VerifierEnumerationType`
+
+error[E0599]: no variant or associated item named `VALUE_EXECUTING` found for enum `VerifierEnumerationType` in the current scope
+     --> src/my_schema.rs:13138:79
+      |
+13108 |     pub enum VerifierEnumerationType {
+      |     -------------------------------- variant or associated item `VALUE_EXECUTING` not found for this enum
+...
+13138 |                 Self::Executing => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_EXECUTING))),
+      |                                                                               ^^^^^^^^^^^^^^^ variant or associated item not found in `VerifierEnumerationType`
+
+error[E0599]: no variant or associated item named `VALUE_COMPLETE` found for enum `VerifierEnumerationType` in the current scope
+     --> src/my_schema.rs:13139:78
+      |
+13108 |     pub enum VerifierEnumerationType {
+      |     -------------------------------- variant or associated item `VALUE_COMPLETE` not found for this enum
+...
+13139 |                 Self::Complete => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_COMPLETE))),
+      |                                                                              ^^^^^^^^^^^^^^ variant or associated item not found in `VerifierEnumerationType`
+
+error[E0599]: no variant or associated item named `VALUE_FAILED` found for enum `VerifierEnumerationType` in the current scope
+     --> src/my_schema.rs:13140:76
+      |
+13108 |     pub enum VerifierEnumerationType {
+      |     -------------------------------- variant or associated item `VALUE_FAILED` not found for this enum
+...
+13140 |                 Self::Failed => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_FAILED))),
+      |                                                                            ^^^^^^^^^^^^ variant or associated item not found in `VerifierEnumerationType`
+
+error[E0599]: no variant or associated item named `VALUE_UNIX_SUM` found for enum `ChecksumTypeNameType` in the current scope
+     --> src/my_schema.rs:13262:77
+      |
+13237 |     pub enum ChecksumTypeNameType {
+      |     ----------------------------- variant or associated item `VALUE_UNIX_SUM` not found for this enum
+...
+13262 |                 Self::UnixSum => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_UNIX_SUM))),
+      |                                                                             ^^^^^^^^^^^^^^ variant or associated item not found in `ChecksumTypeNameType`
+
+error[E0599]: no variant or associated item named `VALUE_SUM_8` found for enum `ChecksumTypeNameType` in the current scope
+     --> src/my_schema.rs:13263:74
+      |
+13237 |     pub enum ChecksumTypeNameType {
+      |     ----------------------------- variant or associated item `VALUE_SUM_8` not found for this enum
+...
+13263 |                 Self::Sum8 => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_SUM_8))),
+      |                                                                          ^^^^^^^^^^^ variant or associated item not found in `ChecksumTypeNameType`
+
+error[E0599]: no variant or associated item named `VALUE_SUM_16` found for enum `ChecksumTypeNameType` in the current scope
+     --> src/my_schema.rs:13264:75
+      |
+13237 |     pub enum ChecksumTypeNameType {
+      |     ----------------------------- variant or associated item `VALUE_SUM_16` not found for this enum
+...
+13264 |                 Self::Sum16 => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_SUM_16))),
+      |                                                                           ^^^^^^^^^^^^ variant or associated item not found in `ChecksumTypeNameType`
+
+error[E0599]: no variant or associated item named `VALUE_SUM_24` found for enum `ChecksumTypeNameType` in the current scope
+     --> src/my_schema.rs:13265:75
+      |
+13237 |     pub enum ChecksumTypeNameType {
+      |     ----------------------------- variant or associated item `VALUE_SUM_24` not found for this enum
+...
+13265 |                 Self::Sum24 => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_SUM_24))),
+      |                                                                           ^^^^^^^^^^^^ variant or associated item not found in `ChecksumTypeNameType`
+
+error[E0599]: no variant or associated item named `VALUE_SUM_32` found for enum `ChecksumTypeNameType` in the current scope
+     --> src/my_schema.rs:13266:75
+      |
+13237 |     pub enum ChecksumTypeNameType {
+      |     ----------------------------- variant or associated item `VALUE_SUM_32` not found for this enum
+...
+13266 |                 Self::Sum32 => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_SUM_32))),
+      |                                                                           ^^^^^^^^^^^^ variant or associated item not found in `ChecksumTypeNameType`
+
+error[E0599]: no variant or associated item named `VALUE_FLETCHER_4` found for enum `ChecksumTypeNameType` in the current scope
+     --> src/my_schema.rs:13267:79
+      |
+13237 |     pub enum ChecksumTypeNameType {
+      |     ----------------------------- variant or associated item `VALUE_FLETCHER_4` not found for this enum
+...
+13267 |                 Self::Fletcher4 => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_FLETCHER_4))),
+      |                                                                               ^^^^^^^^^^^^^^^^ variant or associated item not found in `ChecksumTypeNameType`
+
+error[E0599]: no variant or associated item named `VALUE_FLETCHER_8` found for enum `ChecksumTypeNameType` in the current scope
+     --> src/my_schema.rs:13268:79
+      |
+13237 |     pub enum ChecksumTypeNameType {
+      |     ----------------------------- variant or associated item `VALUE_FLETCHER_8` not found for this enum
+...
+13268 |                 Self::Fletcher8 => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_FLETCHER_8))),
+      |                                                                               ^^^^^^^^^^^^^^^^ variant or associated item not found in `ChecksumTypeNameType`
+
+error[E0599]: no variant or associated item named `VALUE_FLETCHER_16` found for enum `ChecksumTypeNameType` in the current scope
+     --> src/my_schema.rs:13269:80
+      |
+13237 |     pub enum ChecksumTypeNameType {
+      |     ----------------------------- variant or associated item `VALUE_FLETCHER_16` not found for this enum
+...
+13269 |                 Self::Fletcher16 => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_FLETCHER_16))),
+      |                                                                                ^^^^^^^^^^^^^^^^^ variant or associated item not found in `ChecksumTypeNameType`
+
+error[E0599]: no variant or associated item named `VALUE_FLETCHER_32` found for enum `ChecksumTypeNameType` in the current scope
+     --> src/my_schema.rs:13270:80
+      |
+13237 |     pub enum ChecksumTypeNameType {
+      |     ----------------------------- variant or associated item `VALUE_FLETCHER_32` not found for this enum
+...
+13270 |                 Self::Fletcher32 => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_FLETCHER_32))),
+      |                                                                                ^^^^^^^^^^^^^^^^^ variant or associated item not found in `ChecksumTypeNameType`
+
+error[E0599]: no variant or associated item named `VALUE_ADLER_32` found for enum `ChecksumTypeNameType` in the current scope
+     --> src/my_schema.rs:13271:77
+      |
+13237 |     pub enum ChecksumTypeNameType {
+      |     ----------------------------- variant or associated item `VALUE_ADLER_32` not found for this enum
+...
+13271 |                 Self::Adler32 => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_ADLER_32))),
+      |                                                                             ^^^^^^^^^^^^^^ variant or associated item not found in `ChecksumTypeNameType`
+
+error[E0599]: no variant or associated item named `VALUE_LUHN` found for enum `ChecksumTypeNameType` in the current scope
+     --> src/my_schema.rs:13272:74
+      |
+13237 |     pub enum ChecksumTypeNameType {
+      |     ----------------------------- variant or associated item `VALUE_LUHN` not found for this enum
+...
+13272 |                 Self::Luhn => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_LUHN))),
+      |                                                                          ^^^^^^^^^^ variant or associated item not found in `ChecksumTypeNameType`
+
+error[E0599]: no variant or associated item named `VALUE_VERHOEFF` found for enum `ChecksumTypeNameType` in the current scope
+     --> src/my_schema.rs:13273:78
+      |
+13237 |     pub enum ChecksumTypeNameType {
+      |     ----------------------------- variant or associated item `VALUE_VERHOEFF` not found for this enum
+...
+13273 |                 Self::Verhoeff => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_VERHOEFF))),
+      |                                                                              ^^^^^^^^^^^^^^ variant or associated item not found in `ChecksumTypeNameType`
+
+error[E0599]: no variant or associated item named `VALUE_DAMM` found for enum `ChecksumTypeNameType` in the current scope
+     --> src/my_schema.rs:13274:74
+      |
+13237 |     pub enum ChecksumTypeNameType {
+      |     ----------------------------- variant or associated item `VALUE_DAMM` not found for this enum
+...
+13274 |                 Self::Damm => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_DAMM))),
+      |                                                                          ^^^^^^^^^^ variant or associated item not found in `ChecksumTypeNameType`
+
+error[E0599]: no variant or associated item named `VALUE_CUSTOM` found for enum `ChecksumTypeNameType` in the current scope
+     --> src/my_schema.rs:13275:76
+      |
+13237 |     pub enum ChecksumTypeNameType {
+      |     ----------------------------- variant or associated item `VALUE_CUSTOM` not found for this enum
+...
+13275 |                 Self::Custom => Ok(Some(::std::borrow::Cow::Borrowed(Self::VALUE_CUSTOM))),
+      |                                                                            ^^^^^^^^^^^^ variant or associated item not found in `ChecksumTypeNameType`
+
+Some errors have detailed explanations: E0422, E0433, E0599.
+For more information about an error, try `rustc --explain E0422`.
+warning: `read_write` (bin "read_write") generated 1 warning
+error: could not compile `read_write` (bin "read_write") due to 198 previous errors; 1 warning emitted
